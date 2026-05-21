@@ -1,12 +1,10 @@
 <div align="center">
 
-<img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" alt="MindScan Logo" width="100" height="100"/>
-
-# �? MindScan � Your AI Journal
+# MindScan — Your AI Journal
 
 **Understand your emotions. Track your mood. Grow every day.**
 
-MindScan is an AI-powered mood journaling Android app that analyzes your journal entries using Google Gemini AI and delivers empathetic insights, emotion detection, and personalized daily suggestions � all saved locally on your device.
+MindScan is an AI-powered mood journaling Android app that analyzes your journal entries using Google Gemini AI and delivers empathetic insights, emotion detection, and personalized daily suggestions — all saved locally on your device.
 
 [![Android](https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org)
@@ -18,33 +16,46 @@ MindScan is an AI-powered mood journaling Android app that analyzes your journal
 
 ---
 
-## �? Screenshots
+## Screenshots
 
 <div align="center">
-
-|                                           �? Write Your Entry                                            |                                       �? AI Analysis Result                                        |                                            �? Home Dashboard                                             |
-|:--------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|
-| <img src="https://raw.githubusercontent.com/Kingjha13/MindScan/main/screenshots/img1.jpeg" width="220"/> | <img src="https://raw.githubusercontent.com/Kingjha13/MindScan/main/shots/img2.jpeg" width="220"/> | <img src="https://raw.githubusercontent.com/Kingjha13/MindScan/main/screenshots/img3.jpeg" width="220"/> |
-|                               Write freely and let AI understand your mood                               |                             Instant mood score, emotions & AI insight                              |                                 Track your mood history and weekly stats                                 |
-
+<table>
+  <tr>
+    <td align="center">
+      <img src="img1.jpeg" width="220" alt="Write Your Entry"/><br/>
+      <sub><b>✍️ Write Your Entry</b></sub><br/>
+      <sub>Write freely and let AI understand your mood</sub>
+    </td>
+    <td align="center">
+      <img src="img2.jpeg" width="220" alt="AI Analysis Result"/><br/>
+      <sub><b>🤖 AI Analysis Result</b></sub><br/>
+      <sub>Instant mood score, emotions & AI insight</sub>
+    </td>
+    <td align="center">
+      <img src="img3.jpeg" width="220" alt="Home Dashboard"/><br/>
+      <sub><b>📊 Home Dashboard</b></sub><br/>
+      <sub>Track your mood history and weekly stats</sub>
+    </td>
+  </tr>
+</table>
 </div>
 
 ---
 
-## �? Features
+## Features
 
-- �? **AI-Powered Journal** � Write freely; Gemini 2.5 Flash analyzes your emotions instantly
-- �? **Mood Score** � Visual progress bar showing your positivity level (0�100%)
-- �? **Empathetic Insights** � Personalized observations based on what you wrote
-- �? **Actionable Suggestions** � Practical daily tips tailored to your current mood
-- �? **Emotion Tags** � Detects 2�4 specific emotions per entry (e.g., Longing, Clarity, Optimism)
-- �? **Mood Dashboard** � Weekly & monthly average mood overview at a glance
-- �? **Offline Storage** � All entries saved locally using Room database
-- �? **Dynamic Theming** � Card colors shift based on your mood score
+- **AI-Powered Journal** — Write freely; Gemini 2.5 Flash analyzes your emotions instantly
+- **Mood Score** — Visual progress bar showing your positivity level (0–100%)
+- **Empathetic Insights** — Personalized observations based on what you wrote
+- **Actionable Suggestions** — Practical daily tips tailored to your current mood
+- **Emotion Tags** — Detects 2–4 specific emotions per entry (e.g., Longing, Clarity, Optimism)
+- **Mood Dashboard** — Weekly & monthly average mood overview at a glance
+- **Offline Storage** — All entries saved locally using Room database
+- **Dynamic Theming** — Card colors shift based on your mood score
 
 ---
 
-## �? Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -60,37 +71,37 @@ MindScan is an AI-powered mood journaling Android app that analyzes your journal
 
 ---
 
-## �? Project Structure
+## Project Structure
 
 ```
 MindScan/
-��� data/
-�   ��� local/          # Room DB � entities, DAO, database
-�   ��� remote/         # Gemini API service, DTOs
-��� di/                 # Hilt dependency injection modules
-��� domain/
-�   ��� model/          # Business models (JournalEntry, MoodAnalysis)
-�   ��� repository/     # Repository interface + implementation
-�   ��� usecase/        # AnalyzeMood, SaveJournal, GetHistory, GetStats
-��� presentation/
-�   ��� theme/          # Material 3 theme, mood colors
-�   ��� ui/
-�   �   ��� home/       # Home screen & journal entry cards
-�   �   ��� entry/      # New entry screen & AI analysis card
-�   �   ��� navigation/ # NavGraph setup
-�   ��� viewmodel/      # JournalViewModel + JournalUiState
-��� utils/              # Result sealed class
+├── data/
+│   ├── local/          # Room DB — entities, DAO, database
+│   └── remote/         # Gemini API service, DTOs
+├── di/                 # Hilt dependency injection modules
+├── domain/
+│   ├── model/          # Business models (JournalEntry, MoodAnalysis)
+│   ├── repository/     # Repository interface + implementation
+│   └── usecase/        # AnalyzeMood, SaveJournal, GetHistory, GetStats
+├── presentation/
+│   ├── theme/          # Material 3 theme, mood colors
+│   ├── ui/
+│   │   ├── home/       # Home screen & journal entry cards
+│   │   ├── entry/      # New entry screen & AI analysis card
+│   │   └── navigation/ # NavGraph setup
+│   └── viewmodel/      # JournalViewModel + JournalUiState
+└── utils/              # Result sealed class
 ```
 
 ---
 
-## �? Getting Started
+## Getting Started
 
 ### Prerequisites
 
 - Android Studio Hedgehog or later
 - Android SDK 24+
-- A Google Gemini API key � [Get one here](https://aistudio.google.com/app/apikey)
+- A Google Gemini API key — [Get one here](https://aistudio.google.com/app/apikey)
 
 ### Setup
 
@@ -111,40 +122,40 @@ MindScan/
    private val apiKey = "AIza..."
    ```
 
-   > � **Security tip:** For production, store the key in `local.properties` and access it via `BuildConfig` to avoid exposing it in source control.
+   > **Security tip:** For production, store the key in `local.properties` and access it via `BuildConfig` to avoid exposing it in source control.
 
 3. **Build and run**
 
-   Open the project in Android Studio and click **Run** �, or:
+   Open the project in Android Studio and click **Run**, or:
    ```bash
    ./gradlew assembleDebug
    ```
 
 ---
 
-## �? How It Works
+## How It Works
 
 ```
 User writes journal entry
-        �
+        ↓
 [AnalyzeMoodUseCase] validates input (min 10 chars)
-        �
+        ↓
 [JournalRepositoryImpl] builds a structured prompt
-        �
+        ↓
 [GeminiApiService] sends request to Gemini 2.5 Flash
-        �
-AI returns JSON � { mood, moodScore, emotions, insight, suggestion }
-        �
-Parsed � MoodAnalysis domain model
-        �
+        ↓
+AI returns JSON → { mood, moodScore, emotions, insight, suggestion }
+        ↓
+Parsed → MoodAnalysis domain model
+        ↓
 [SaveJournalUseCase] persists entry to Room DB
-        �
+        ↓
 UI updates with animated AI Analysis Card
 ```
 
 ---
 
-## �? Roadmap
+## Roadmap
 
 - [ ] Mood trend chart (line graph over 30 days)
 - [ ] Entry detail screen with full AI analysis view
@@ -156,7 +167,7 @@ UI updates with animated AI Analysis Card
 
 ---
 
-## �? Contributing
+## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
@@ -168,15 +179,15 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ---
 
-## �? License
+## License
 
-This project is licensed under the MIT License � see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
 
-Made with � by [Kingjha13](https://github.com/Kingjha13)
+Made with ❤️ by [Kingjha13](https://github.com/Kingjha13)
 
 *Write. Reflect. Grow.*
 
